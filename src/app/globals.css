@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: #fdfbf7;
+  --color-foreground: #2d2d2d;
+  --color-muted: #e5e0d8;
+  --color-accent: #ff4d4d;
+  --color-secondary: #2d5da1;
+  --color-border: #2d2d2d;
+  --color-paper: #ffffff;
+  --color-paper-soft: #fff9c4;
+  --radius-wobbly: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  --radius-wobbly-md: 75px 25px 75px 25px / 25px 75px 25px 75px;
+  --shadow-hard: 4px 4px 0px 0px var(--color-border);
+  --shadow-hover: 2px 2px 0px 0px var(--color-border);
+  --shadow-strong: 8px 8px 0px 0px var(--color-border);
+}
+
+@theme inline {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --font-sans: var(--font-patrick);
+  --font-mono: var(--font-patrick);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #fdfbf7;
+    --color-foreground: #2d2d2d;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--color-background);
+  background-image: radial-gradient(var(--color-muted) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--color-foreground);
+  font-family: var(--font-patrick), Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.hand-drawn-card {
+  background: var(--color-paper);
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-wobbly);
+  box-shadow: var(--shadow-hard);
+}
+
+.hand-drawn-button {
+  background: var(--color-paper);
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-wobbly);
+  box-shadow: var(--shadow-hard);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.hand-drawn-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.hand-drawn-button:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+.hand-drawn-input {
+  background: var(--color-paper);
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-wobbly);
+  box-shadow: var(--shadow-hard);
+  padding: 0.9rem 1rem;
+  color: var(--color-foreground);
+  resize: vertical;
+}
