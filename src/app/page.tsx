@@ -6,13 +6,13 @@ const cards = [
   {
     title: "Farm Visit Research Guide",
     description: "Field-ready questions, observation checklists, and a problem-to-product mapper for every farm visit.",
-    href: "/farm-visit-research-guide",
+    href: "/FarmVisitResearchGuide",
     accent: tokens.colors.accent,
   },
   {
     title: "Livestock Tech Stack",
     description: "Competitive intelligence, PRD requirements, and tradeoff mapping across the leading livestock AgTech platforms.",
-    href: "/livestock-tech-stack",
+    href: "/LivestockTechStack",
     accent: tokens.colors.secondary,
   },
 ];
